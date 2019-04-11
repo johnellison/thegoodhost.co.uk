@@ -1,0 +1,44 @@
+.full-height {
+  min-height: 100vh;
+}
+
+section.welcome {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: url("/assets/img/airbnb-bed-768.jpg");
+  background-repeat: none;
+  background-size: cover;
+  @include breakpoint(large) {
+      background: url("/assets/img/airbnb-bed-1024.jpg");
+      background-repeat: none;
+      background-size: cover;
+  }
+  @include breakpoint(xlarge) {
+      background: url("/assets/img/airbnb-bed-1280.jpg");
+      background-repeat: none;
+      background-size: cover;
+  }
+}
+
+section.problem {
+  @include grid-row;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem__content {
+  @include grid-col;
+}
+
+.problem__heading {
+  margin-bottom: 2rem;
+}
+
+
+.problem__point {
+  @include callout;
+}

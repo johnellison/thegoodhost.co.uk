@@ -1,4 +1,8 @@
-$topbar-center-logo-bg: rgb(255, 245, 107);
+$topbar-center-logo-bg: $norwich-yellow;
+
+.top-bar {
+  padding: 1rem;
+}
 
 .topbar-center-logo {
   background: $topbar-center-logo-bg;
@@ -6,7 +10,7 @@ $topbar-center-logo-bg: rgb(255, 245, 107);
   .menu {
     background: $topbar-center-logo-bg;
     a {
-      font-weight: bold;
+      @include small-caps;
     }
   }
 }

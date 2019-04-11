@@ -80,7 +80,6 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$midnight: #08232C;
 $body-background: $white;
 $body-font-color: $midnight;
 $body-font-family: $sans-serif-font-family;
@@ -141,12 +140,12 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 28),
-    'h2': ('font-size': 24),
-    'h3': ('font-size': 22),
+    'h1': ('font-size': 32),
+    'h2': ('font-size': 28),
+    'h3': ('font-size': 24),
     'h4': ('font-size': 20),
-    'h5': ('font-size': 19),
-    'h6': ('font-size': 18),
+    'h5': ('font-size': 18),
+    'h6': ('font-size': 16),
   ),
   medium: (
     'h1': ('font-size': 48),
