@@ -1,82 +1,49 @@
 <main class="content">
 
-  <section class="welcome full-height">
+  {{> welcome }}
+  {{> problem }}
+
+  <section class="segue yellow">
     <div class="row">
-      <div class="columns small-12 medium-10 medium-offset-1 large-7">
-        <hgroup class="welcome__heading">
-          <h1>Hello 30% better returns.</h1>
-          <p class="lead">We are The Good Host&mdash;Norwich’s first professional Airbnb management company. Nice to meet you.</p>
-        </hgroup>
-        <form id="earningsEstimate" class="welcome__form">
-          <h2 class="h4">See how much you could earn</h2>
-          <legend>
-            <div class="row">
-              <div class="columns small-6">
-                <label for="first_name">First name<input type="text" name="first_name" placeholder="John Doe" required></label>
-              </div>
-              <div class="columns small-6">
-                <label for="email">Email address<input type="email" name="email" placeholder="john@doe.com" required></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="columns small-9">
-                <label for="street_address">Street address<input type="text" name="street_address" placeholder="Street address" required></label>
-              </div>
-              <div class="columns small-3">
-              <label for="postcode">Postcode<input type="text" name="postcode" placeholder="Postcode" required></label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="columns small-6">
-                <label for="bed">
-                  Number of bedrooms
-                  <input type="number" name="number_of_bedrooms" placeholder="Number of bedrooms" required>
-                </label>
-              </div>
-              <div class="columns small-6">
-                <label for="bath">
-                  Number of bathrooms
-                  <input type="number" name="number_of_bathrooms" placeholder="Number of bathrooms" required>
-                </label>
-              </div>
-            </div>
-            <label for="GDPR" class="consent-box">
-              <input type="checkbox" required id="GDPR" name="GDPR">
-              <small>I consent to allow The Good Host to store, process the personal information submitted above to provide you the content requested and provide other relevant communications. I understand that I can unsubscribe from these communications at any time. For more information please review our <a href="/privacy-policy.pdf">Privacy Policy.</a></small>
-            </label>
-
-            <input type="submit" value="SEND" id="earningsEstimateSubmit" class="button medium">
-          </legend>
-        </form>
-        <div id="successMessage" class="success_message">
-          <h3>Thank you! Your earnings request has been submitted</h3>
-          <p>We will get back to you with a customized forecast in the next 48 hours.</p>
-          <p>If you have any questions please give us a call on <a href="tel:08009804349">0800 980 4349</a> or email us at <a href="mailto:info@thegoodhost.co.uk">info@thegoodhost.co.uk</a>.</p>
-        </div>
+      <div class="column">
+        <h2 class="text-center">Thankfully, there is another way.</h2>
       </div>
     </div>
   </section>
-  <section class="problem full-height">
-    <div class="problem__content">
-      <div class="problem__heading">
-        <h2>The challenges ever investor faces</h2>
-        <h3 class="subheader h4">We get it. We're investors too.</h3>
-              <p>Making returns from renting property in Norwich has gotten more and more challenging over the years. As investors we've discovered a way to unlock significantly better returns while also avoiding the worst parts about renting property:</p>
-      </div>
 
-      <div class="problem__point">
-        <h3>1. Bad estate agents</h3>
-        <p>If you haven't personally had a terrible experience with an estate agent, I'm sure you know at least one person who has. Poor communication, dishonesty, lack of consistency and incompetency are some words that come to mind...</p>
-      </div>
-      <div class="problem__point">
-        <h3>2. Terrible tenants</h3>
-        <p>If only tenants would always pay on time and leave your property in great condition, but as we all know, it's hit or miss. If you have a great long-term tenant it's like hitting the jackpot. If you get a bad tenant, it can be a total nightmare.</p>
-      </div>
-      <div class="problem__point">
-        <h3>3. Government regulation</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam facilis inventore ex quod veniam nihil in ducimus mollitia quia corporis cum nostrum, nemo ad deserunt animi aut. Quo, unde, reprehenderit.</p>
+  {{> offering }}
+
+  <section class="segue teal">
+    <div class="row">
+      <div class="column">
+        <h2 class="text-center">How does it work?</h2>
       </div>
     </div>
   </section>
+
+  {{> how-it-works }}
+
+  <section class="segue yellow">
+    <div class="row">
+      <div class="column">
+        <h2 class="text-center">What if something goes wrong?</h2>
+      </div>
+    </div>
+  </section>
+
+  {{> insurance }}
+
+  <section class="segue teal">
+    <div class="row">
+      <div class="column">
+        <h2 class="text-center">Who is this for?</h2>
+      </div>
+    </div>
+  </section>
+
+  {{> customers }}
+
+  {{> cta }}
+
+  <!-- {{> story }} -->
 </main>

@@ -1,0 +1,15 @@
+.customers {
+
+}
+
+.customer {
+  @include card-container;
+}
+
+img.customer__image {
+
+}
+
+.customer__content {
+  @include card-section;
+}

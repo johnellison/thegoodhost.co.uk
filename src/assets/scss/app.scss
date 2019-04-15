@@ -2,6 +2,10 @@
 
 @import "global/variables";
 
+// Mixins
+@import "mixins/section-padding";
+@import "mixins/material-shadow";
+
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -70,11 +74,17 @@
 
 // Custom components
 @import "components/button";
+@import "components/callout";
+@import "components/customer";
 @import "components/form";
+@import "components/segue";
 @import "components/site-footer";
+@import "components/story";
 
 // Layout
 @import "layout/index";
 
 @import 'components/building-blocks/responsive-nav-social';
 @import 'components/building-blocks/topbar-center-logo';
+
+@import 'components/building-blocks/responsive-timeline';

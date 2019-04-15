@@ -1,15 +1,15 @@
-.subheader {
-  font-family: $sans-serif-font-family;
-}
-
-small {
-  font-size: .8rem;
-}
-
 @mixin small-caps {
-  font-size: 1.2rem;
   letter-spacing: .5px;
   font-weight: bold;
   text-transform: lowercase;
   font-variant: small-caps;
+}
+
+.subheader {
+  font-family: $sans-serif-font-family;
+  @include small-caps;
+}
+
+small {
+  font-size: .8rem;
 }

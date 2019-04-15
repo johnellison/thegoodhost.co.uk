@@ -10,7 +10,9 @@ $topbar-center-logo-bg: $norwich-yellow;
   .menu {
     background: $topbar-center-logo-bg;
     a {
-      @include small-caps;
+      text-transform: uppercase;
+      font-size: .9rem;
+      font-weight: bold;
     }
   }
 }

@@ -1,3 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .full-height {
   min-height: 100vh;
 }
@@ -22,23 +28,42 @@ section.welcome {
   }
 }
 
-section.problem {
-  @include grid-row;
-  padding: 4rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section.problem,
+section.offering,
+section.insurance,
+section.story,
+section.customers,
+section.how-it-works,
+section.cta {
+  @include flex-center;
+  @include section-padding;
 }
 
-.problem__content {
-  @include grid-col;
-}
-
-.problem__heading {
+.problem__heading,
+.offering__heading,
+.insurance__heading,
+.story__heading,
+.customers__heading {
   margin-bottom: 2rem;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.timeline__heading {
+  @include grid-col;
+  margin-top: 2rem;
+  text-align: center;
+  img {
+    margin: 0 auto .5rem auto;
+  }
+  @include breakpoint(medium) {
+    @include grid-col(7);
+    @include grid-column-position(center);
+  }
 }
 
 
-.problem__point {
-  @include callout;
+section.customers {
+  background: $light-gray;
 }

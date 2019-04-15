@@ -1,0 +1,172 @@
+$timeline-color: $primary-color;
+$timeline-transition: all 0.2s ease-in-out;
+$timeline-item-card-bg: $white;
+$timeline-item-font-color: $midnight;
+$timeline-item-card: true;
+$timeline-item-card-radius: $global-radius;
+
+#timeline {
+  display: none;
+}
+
+%clearfix {
+  &::after,
+  &::before {
+    clear: both;
+    content: '';
+    display: block;
+    width: 100%;
+  }
+}
+
+.timeline__heading h3 {
+  @include breakpoint(medium) {
+    text-align: center;
+  }
+}
+
+// Timeline
+.timeline {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  position: relative;
+  transition: $timeline-transition;
+  width: 100%;
+
+  &::before {
+    background: $timeline-color;
+    content: '';
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 3px;
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+    width: 100%;
+  }
+
+  a {
+    color: $timeline-item-font-color;
+    text-decoration: underline;
+    transition: $timeline-transition;
+
+    &:hover {
+      color: lighten($timeline-item-font-color, 25%);
+    }
+  }
+
+  .timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    @extend %clearfix;
+
+    .timeline-icon {
+      background: $primary-color;
+      border-radius: 50%;
+      height: 3rem;
+      left: 50%;
+      margin-left: -23px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 3rem;
+
+      h3 {
+        left: 16px;
+        position: relative;
+        top: 2px;
+        color: $white;
+        &.four {
+          left: 13px;
+          top: 0;
+        }
+        &.six {
+          top: 5px;
+          left: 13px;
+        }
+      }
+    }
+
+    .timeline-content {
+      padding: 1.5rem;
+      text-align: right;
+      transition: $timeline-transition;
+      width: 45%;
+
+      @if $timeline-item-card == true {
+        background: $timeline-item-card-bg;
+        border-radius: $timeline-item-card-radius;
+        border: 1px solid #e6e6e6;
+
+        p {
+          color: $black;
+        }
+      } @else {
+        background: transparent;
+
+        p {
+          color: $timeline-item-font-color;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .timeline-content-date {
+        margin-bottom: 0;
+      }
+
+      .timeline-content-month {
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      &.right {
+        float: right;
+        text-align: left;
+      }
+    }
+  }
+  .timeline-item--last {
+    @extend .timeline-item;
+    margin-bottom: 0;
+  }
+}
+
+@include breakpoint(small only) {
+  .timeline {
+    margin: 2rem;
+    padding: 0;
+    width: 90%;
+
+    &::before {
+      left: 0;
+    }
+
+    .timeline-item {
+      .timeline-content {
+        float: right;
+        text-align: left;
+        width: 90%;
+
+        &::before,
+        &.right::before {
+          border-left: 0;
+          border-right: 7px solid $timeline-color;
+          left: 10%;
+          margin-left: -6px;
+        }
+      }
+
+      .timeline-icon {
+        left: 0;
+      }
+    }
+  }
+}
