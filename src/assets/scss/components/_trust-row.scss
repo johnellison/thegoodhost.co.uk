@@ -1,0 +1,13 @@
+.trust-row {
+  @extend .segue;
+  @extend .thin;
+  text-align: center;
+}
+
+.trust-row__airbnb {
+  width: 150px;
+}
+
+.trustpilot-widget {
+  padding-top: 1.25rem;
+}

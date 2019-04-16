@@ -1,15 +1,22 @@
 section.segue {
+  background-color: $white;
   @include section-padding;
   h1, h2, h3, h4 {
     margin: 0;
   }
   &.yellow {
     background-color: $norwich-yellow;
+    h1, h2, h3, h4 {
+      color: $primary-color;
+    }
   }
   &.teal {
     background-color: $primary-color;
     h1, h2, h3, h4 {
       color: $white;
     }
+  }
+  &.thin {
+    padding: 2rem 0;
   }
 }

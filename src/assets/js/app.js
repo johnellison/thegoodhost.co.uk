@@ -16,9 +16,39 @@ require('foundation-sites');
 $(document).foundation();
 
 $(document).ready(function(){
-  $('#earningsEstimateSubmit').click(function(e){
-    $('#earningsEstimate').hide(function(){
-      $('#successMessage').show();
+
+  $('[data-event="contact-button"]').on('click', function(){
+    ga('send', {
+      'hitType': 'event',
+      'eventCategory': 'Contact',
+      'eventAction': 'clicked',
+      'eventLabel': $(this).text(),
+      'eventValue': 10
+    });
+  });
+
+  $('[data-event="connect-social"]').on('click', function(){
+    ga('send', {
+      'hitType': 'event',
+      'eventCategory': 'Connect Social',
+      'eventAction': 'clicked',
+      'eventLabel': $(this).attr('href'),
+      'eventValue': 5
+    });
+  });
+
+  $('.earningsEstimateSubmit').click(function(e){
+    e.preventDefault();
+    $('.earningsHeader').hide();
+    $('.earningsEstimate').hide(function(){
+      $('.successMessage').show();
+    });
+    ga('send', {
+      'hitType': 'event',
+      'eventCategory': 'EarningsForm',
+      'eventAction': 'Request',
+      'eventLabel': 'Submit',
+      'eventValue': 50
     });
   });
 });

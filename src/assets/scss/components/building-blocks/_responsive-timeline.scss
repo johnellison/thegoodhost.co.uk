@@ -77,18 +77,9 @@ $timeline-item-card-radius: $global-radius;
       width: 3rem;
 
       h3 {
-        left: 16px;
         position: relative;
         top: 2px;
         color: $white;
-        &.four {
-          left: 13px;
-          top: 0;
-        }
-        &.six {
-          top: 5px;
-          left: 13px;
-        }
       }
     }
 
