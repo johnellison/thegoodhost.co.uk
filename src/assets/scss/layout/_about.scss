@@ -14,13 +14,6 @@
   }
 }
 
-.about__content {
-  h1 {
-    margin-bottom: -1rem;
-  }
-}
-
-
 .john__bg {
   @include breakpoint(large) {
     background: url('/assets/img/john-ellison-1200.jpg');
