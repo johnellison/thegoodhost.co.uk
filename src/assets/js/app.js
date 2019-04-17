@@ -18,27 +18,25 @@ $(document).foundation();
 $(document).ready(function(){
 
   $('[data-event="contact-button"]').on('click', function(){
-    ga('send', {
-      'hitType': 'event',
-      'eventCategory': 'Contact',
-      'eventAction': 'clicked',
-      'eventLabel': $(this).text(),
-      'eventValue': 10
+    alert($(this).text());
+    gtag('event', 'Clicked', {
+      'event_category': 'Contact',
+      'event_label': $(this).text(),
+      'value': 10
     });
   });
 
   $('[data-event="connect-social"]').on('click', function(){
-    ga('send', {
-      'hitType': 'event',
-      'eventCategory': 'Connect Social',
-      'eventAction': 'clicked',
-      'eventLabel': $(this).attr('href'),
-      'eventValue': 5
+    gtag('event', 'Clicked', {
+      'event_category': 'Connect Social',
+      'event_label': $(this).attr('href'),
+      'value': 2
     });
   });
 
   $('.earningsEstimate').submit(function(e){
     e.preventDefault();
+
     $.ajax({
       url: 'https://hooks.zapier.com/hooks/catch/4776817/7qz5do/silent/',
       type: 'post',
@@ -48,12 +46,10 @@ $(document).ready(function(){
         $('.earningsEstimate').hide(function(){
           $('.successMessage').show();
         });
-        ga('send', {
-          'hitType': 'event',
-          'eventCategory': 'EarningsForm',
-          'eventAction': 'Request',
-          'eventLabel': 'Submit',
-          'eventValue': 50
+        gtag('event', 'Request', {
+          'event_category': 'Earnings Form',
+          'event_label': 'Submit',
+          'value': 50
         });
       }
     });
