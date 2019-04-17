@@ -37,18 +37,26 @@ $(document).ready(function(){
     });
   });
 
-  $('.earningsEstimateSubmit').click(function(e){
+  $('.earningsEstimate').submit(function(e){
     e.preventDefault();
-    $('.earningsHeader').hide();
-    $('.earningsEstimate').hide(function(){
-      $('.successMessage').show();
-    });
-    ga('send', {
-      'hitType': 'event',
-      'eventCategory': 'EarningsForm',
-      'eventAction': 'Request',
-      'eventLabel': 'Submit',
-      'eventValue': 50
+    $.ajax({
+      url: 'https://hooks.zapier.com/hooks/catch/4776817/7qz5do/silent/',
+      type: 'post',
+      data: $(this).serialize(),
+      success: function() {
+        $('.earningsHeader').hide();
+        $('.earningsEstimate').hide(function(){
+          $('.successMessage').show();
+        });
+        ga('send', {
+          'hitType': 'event',
+          'eventCategory': 'EarningsForm',
+          'eventAction': 'Request',
+          'eventLabel': 'Submit',
+          'eventValue': 50
+        });
+      }
     });
   });
+
 });
