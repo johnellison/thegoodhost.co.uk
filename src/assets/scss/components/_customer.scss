@@ -12,4 +12,7 @@ img.customer__image {
 
 .customer__content {
   @include card-section;
+  @include breakpoint(small-only) {
+    font-size: .75rem;
+  }
 }

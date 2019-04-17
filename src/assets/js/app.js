@@ -18,7 +18,6 @@ $(document).foundation();
 $(document).ready(function(){
 
   $('[data-event="contact-button"]').on('click', function(){
-    alert($(this).text());
     gtag('event', 'Clicked', {
       'event_category': 'Contact',
       'event_label': $(this).text(),
