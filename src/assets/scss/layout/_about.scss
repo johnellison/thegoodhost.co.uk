@@ -1,0 +1,15 @@
+.about__bg {
+  background: url('/assets/img/norwich-market-640.jpg');
+  background-size: cover;
+  background-repeat: none;
+  @include breakpoint(large) {
+    background: url('/assets/img/norwich-market-1024.jpg');
+    background-size: cover;
+    background-repeat: none;
+  }
+  @include breakpoint(xlarge) {
+    background: url('/assets/img/norwich-market-1440.jpg');
+    background-size: cover;
+    background-repeat: none;
+  }
+}
