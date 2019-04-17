@@ -5,6 +5,7 @@
 // Mixins
 @import "mixins/section-padding";
 @import "mixins/material-shadow";
+@import "mixins/flex-center";
 
 @import 'settings';
 @import 'foundation';
@@ -76,6 +77,7 @@
 @import "components/button";
 @import "components/callout";
 @import "components/card";
+@import "components/content-section";
 @import "components/customer";
 @import "components/form";
 @import "components/segue";

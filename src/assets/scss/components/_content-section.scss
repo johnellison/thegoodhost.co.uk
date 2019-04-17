@@ -1,0 +1,52 @@
+section.insurance,
+section.story,
+section.customers,
+section.how-it-works,
+section.process,
+section.cta {
+  @include flex-center;
+  @include section-padding;
+}
+
+.content-section {
+  @include flex-center;
+  @include section-padding
+}
+
+.content-section--full-height {
+  @extend .content-section;
+  min-height: 100vh;
+}
+
+.content-section__heading {
+  margin-bottom: 2rem;
+  h2 {
+    margin-bottom: 0;
+  }
+  @include breakpoint(large) {
+    margin-bottom: 0;
+    padding-top: 2rem;
+  }
+}
+
+.content-section__half {
+  @include grid-col;
+  @include breakpoint(large) {
+    @include grid-col(6);
+  }
+}
+
+
+.content-section__half--push {
+  @extend .content-section__half;
+  @include breakpoint(large) {
+    @include grid-col-pos(6);
+  }
+}
+
+.content-section__half--pull {
+  @extend .content-section__half;
+  @include breakpoint(large) {
+    @include grid-col-pos(-6);
+  }
+}

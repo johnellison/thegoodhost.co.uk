@@ -1,15 +1,7 @@
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.full-height {
-  min-height: 100vh;
-}
-
 section.welcome {
   width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
   display: flex;
   align-items: center;
   background: url("/assets/img/airbnb-bed-768.jpg");
@@ -19,6 +11,7 @@ section.welcome {
       background: url("/assets/img/airbnb-bed-1024.jpg");
       background-repeat: none;
       background-size: cover;
+      padding: 4rem 0;
   }
   @include breakpoint(xlarge) {
       background: url("/assets/img/airbnb-bed-1280.jpg");
@@ -27,26 +20,6 @@ section.welcome {
   }
 }
 
-section.process { display: none; }
-
-section.problem,
-section.offering,
-section.insurance,
-section.story,
-section.customers,
-section.how-it-works,
-section.process,
-section.cta {
-  @include flex-center;
-  @include section-padding;
-  img {
-    margin-bottom: 1rem;
-  }
-}
-
-.problem__heading,
-.offering__heading,
-.insurance__heading,
 .story__heading,
 .customers__heading {
   margin-bottom: 2rem;
@@ -63,21 +36,15 @@ section.cta {
     background-size: 50% 100%;
     background-position: right top;
   }
+
   .offering__bg {
     background-image: url('/assets/img/white-minimalist-home.jpg');
     background-repeat: no-repeat;
     background-size: 50% 100%;
     background-position: left top;
-
-  }
-  .problem__content .columns {
-    padding: 0 2rem;
-  }
-  .problem__content .problem__heading__wrapper {
-    padding-top: 2rem;
   }
 
-  .how-it-works {
+  .how-it-works__bg {
     background-image: url('/assets/img/simplicity.jpg');
     background-size: cover;
   }
