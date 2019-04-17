@@ -1,15 +1,52 @@
 .about__bg {
   background: url('/assets/img/norwich-market-640.jpg');
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   @include breakpoint(large) {
     background: url('/assets/img/norwich-market-1024.jpg');
     background-size: cover;
-    background-repeat: none;
+    background-repeat: no-repeat;
   }
   @include breakpoint(xlarge) {
     background: url('/assets/img/norwich-market-1440.jpg');
     background-size: cover;
-    background-repeat: none;
+    background-repeat: no-repeat;
   }
+}
+
+.about__content {
+  h1 {
+    margin-bottom: -1rem;
+  }
+}
+
+
+.john__bg {
+  @include breakpoint(large) {
+    background: url('/assets/img/john-ellison-1200.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include breakpoint(xlarge) {
+    background: url('/assets/img/john-ellison-1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.ollie__bg {
+  @include breakpoint(large) {
+    background: url('/assets/img/ollie-krol-1200.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include breakpoint(xlarge) {
+    background: url('/assets/img/ollie-krol-1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.story-timeline {
+  padding: 4rem 0;
 }

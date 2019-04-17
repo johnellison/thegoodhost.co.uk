@@ -63,7 +63,7 @@
 // Helpers
 // @include foundation-float-classes;
 // @include foundation-flex-classes;
-// @include foundation-visibility-classes;
+@include foundation-visibility-classes;
 // @include foundation-prototype-classes;
 
 // Motion UI
@@ -82,7 +82,6 @@
 @import "components/form";
 @import "components/segue";
 @import "components/site-footer";
-@import "components/story";
 @import "components/trust-row";
 
 // Layout
