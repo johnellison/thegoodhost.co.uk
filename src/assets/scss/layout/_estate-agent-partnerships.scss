@@ -1,0 +1,30 @@
+.vendors__bg {
+  background-image: url('/assets/img/designer-home-sm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landlords__bg {
+  background-image: url('/assets/img/chair-table-sm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@include breakpoint(large) {
+  .vendors__bg {
+    background-image: url('/assets/img/designer-home-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .landlords__bg {
+    background-image: url('/assets/img/chair-table-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 0;
+  }
+}
+
+
+.partnership-process {
+  padding: 4rem 0;
+}

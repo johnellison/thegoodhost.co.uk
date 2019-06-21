@@ -48,6 +48,13 @@ section.welcome {
     background-size: cover;
   }
 
+  .insurance__bg {
+    background-image: url('/assets/img/umbrella.jpg');
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right top;
+  }
+
 }
 
 .timeline__heading {

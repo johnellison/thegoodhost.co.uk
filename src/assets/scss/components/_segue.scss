@@ -16,7 +16,13 @@ section.segue {
       color: $white;
     }
   }
+  &.gray {
+    background-color: $light-gray;
+  }
   &.thin {
     padding: 2rem 0;
+  }
+  &.slim {
+    padding: 4rem 0;
   }
 }
