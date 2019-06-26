@@ -54,4 +54,25 @@ $(document).ready(function(){
     });
   });
 
+  $('.agentApplication').submit(function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url: 'https://hooks.zapier.com/hooks/catch/4776817/oys8e8l/silent/',
+      type: 'post',
+      data: $(this).serialize(),
+      success: function() {
+        $('.ctaHeader').hide();
+        $('form.agentApplication').hide(function(){
+          $('.successMessage').show();
+        });
+        gtag('event', 'Request', {
+          'event_category': 'Agent Application Form',
+          'event_label': 'Submit',
+          'value': 2500
+        });
+      }
+    });
+  });
+
 });

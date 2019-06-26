@@ -74,29 +74,3 @@ section.welcome {
 section.customers {
   background: $light-gray;
 }
-
-section.cta {
-  background: url("/assets/img/norwich-elm-hill-640.jpg");
-  background-repeat: none;
-  background-size: cover;
-  .callout {
-    background: rgba(255,255,255, .8);
-  }
-  @include breakpoint(large) {
-      background: url("/assets/img/norwich-elm-hill-1024.jpg");
-      background-repeat: none;
-      background-size: cover;
-  }
-  @include breakpoint(xlarge) {
-      background: url("/assets/img/norwich-elm-hill-1440.jpg");
-      background-repeat: none;
-      background-size: cover;
-  }
-}
-
-
-.cta__footer {
-  position: relative;
-  top: 4rem;
-  text-align: center;
-}

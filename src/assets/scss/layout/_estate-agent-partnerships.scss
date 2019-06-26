@@ -1,3 +1,17 @@
+.estate-agent-partnerships__bg {
+  background-image: url('/assets/img/norwich-city-hall-sm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(large) {
+    background-image: url('/assets/img/norwich-city-hall-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content-section--full-height {
+    @include flex-center;
+  }
+}
+
 .vendors__bg {
   background-image: url('/assets/img/designer-home-sm.jpg');
   background-repeat: no-repeat;

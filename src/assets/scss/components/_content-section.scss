@@ -9,12 +9,15 @@ section.cta {
 }
 
 .content-section {
+  @include section-padding;
+}
+
+.content-section__row {
   @include flex-center;
-  @include section-padding
 }
 
 .content-section--full-height {
-  @extend .content-section;
+  @include section-padding;
   min-height: 100vh;
 }
 
@@ -33,6 +36,9 @@ section.cta {
   @include grid-col;
   @include breakpoint(large) {
     @include grid-col(6);
+  }
+  &#how-it-works {
+    padding-top: 4rem;
   }
 }
 
