@@ -16,9 +16,7 @@ section.cta {
 }
 
 .content-section__row {
-  @include breakpoint(medium) {
-    @include flex-center;
-  }
+  @include flex-center;
 }
 
 .content-section--full-height {
@@ -40,8 +38,9 @@ section.cta {
 }
 
 .content-section__half {
+  flex: 1 0 auto;
   @include grid-col(12);
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     @include grid-col(6);
   }
   &#how-it-works {
