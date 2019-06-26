@@ -10,14 +10,20 @@ section.cta {
 
 .content-section {
   @include section-padding;
+  img {
+    margin-bottom: 1rem;
+  }
 }
 
 .content-section__row {
-  @include flex-center;
+  @include breakpoint(medium) {
+    @include flex-center;
+  }
 }
 
 .content-section--full-height {
-  @include section-padding;
+  @extend .content-section;
+  height: 100%;
   min-height: 100vh;
 }
 
@@ -30,10 +36,11 @@ section.cta {
     margin-bottom: 0;
     padding-top: 2rem;
   }
+
 }
 
 .content-section__half {
-  @include grid-col;
+  @include grid-col(12);
   @include breakpoint(large) {
     @include grid-col(6);
   }
